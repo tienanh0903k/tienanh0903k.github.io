@@ -1,0 +1,426 @@
+:root {
+  --head_backcolor: #181818;
+  --user-backcolor: rgb(73, 73, 73);
+  --success_color: #09ff00;
+  --error_color: #e74c3c;
+}
+.user {
+  width: 100vw;
+  height: 120vh;
+  background-color: #fff;
+  overflow: hidden;
+}
+/* ========================= USER RIGHT =======================*/
+.user__right {
+  width: 75%;
+  height: 100%;
+  float: left;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+/* -------------------------- Home page User ----------------------*/
+.home_user * {
+  text-transform: none;
+}
+.home_user {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(to bottom, #d5dee7 0%, #e8ebf2 50%, #e2e7ed 100%),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.02) 50%,
+      rgba(255, 255, 255, 0.02) 61%,
+      rgba(0, 0, 0, 0.02) 73%
+    ),
+    linear-gradient(33deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-blend-mode: normal, color-burn;
+}
+.home_welcome {
+  width: 100%;
+}
+.home_welcome img {
+  margin-bottom: 10px;
+  width: 10%;
+  border-radius: 50%;
+}
+.home_welcome span,
+.home_welcome p {
+  font-size: 1.5rem;
+  color: #000;
+}
+.home_content {
+  width: 45%;
+  height: 200px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  float: left;
+  margin-top: 30px;
+  margin-left: 3%;
+  padding: 20px;
+  text-align: left;
+}
+.home_user h2 {
+  font-size: 1.2rem;
+  line-height: 45px;
+}
+.home_user a {
+  text-decoration: none;
+  color: rgb(0, 174, 255);
+}
+.home_content2 {
+  margin-top: 300px;
+  margin-left: 3%;
+  width: 93%;
+  height: 150px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+/* ------------------ Custom - Your Oder ----------------*/
+.custom,
+.information,
+.home_user {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: none;
+  padding: 30px;
+}
+.information {
+  background: linear-gradient(to bottom, #d5dee7 0%, #e8ebf2 50%, #e2e7ed 100%),
+    linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.02) 50%,
+      rgba(255, 255, 255, 0.02) 61%,
+      rgba(0, 0, 0, 0.02) 73%
+    ),
+    linear-gradient(33deg, rgba(255, 255, 255, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-blend-mode: normal, color-burn;
+}
+.user__right.active_custom .custom,
+.user__right.active_info .information,
+.user__right.active_homeuser .home_user {
+  display: block;
+}
+
+.user__right h1 {
+  margin: 10px 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  color: #000;
+  border-bottom: 3px solid;
+}
+.contact span {
+  color: #000;
+}
+.img__color .custom__color img {
+  width: 100%;
+  position: relative;
+  left: -25%;
+  z-index: -1;
+}
+
+.custom__color-options {
+  width: 50%;
+  position: absolute;
+  right: 0px;
+  z-index: 1;
+  padding: 0px 3%;
+  box-shadow: 0px 20px 50px;
+}
+.custom__color-options h2 {
+  margin-top: 20px;
+  font-size: 1rem;
+  display: flex;
+  font-weight: 200;
+}
+
+.custom__color {
+  display: none;
+}
+.custom__color.custom__color-active {
+  display: block;
+}
+.btn__color:hover {
+  transition: all 0.2s;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 217, 255, 0.09) 0px 32px 16px;
+}
+.btn__color.btn__color-active {
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.custom__color-options .btn__color {
+  margin: 20px 10px;
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid lightgrey;
+  border-radius: 100%;
+}
+.order .order__btn {
+  width: 100%;
+  margin: 20px 0;
+}
+.order .order__btn:hover {
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  color: rgba(195, 251, 255, 0.8);
+}
+.order .order__btn:active {
+  transform: translateY(10px);
+}
+.order__btn {
+  transition: 0.3s linear;
+  background-color: #181818;
+  color: #fff;
+  width: 80%;
+  height: 50px;
+  font-weight: 900;
+  font-size: 1rem;
+}
+/* custom wheel */
+.custom__wheels img {
+  margin-left: 10px;
+  width: 30%;
+  transition: 1s ease;
+  opacity: 80%;
+}
+.custom__wheels img:hover,
+.wheels__pic.pic {
+  transform: scale(120%);
+  opacity: 1;
+}
+.Price {
+  width: 100%;
+}
+
+.table_price tr td {
+  text-align: center;
+  width: 10%;
+  border-bottom: 1px solid;
+}
+.total,
+.table_price span {
+  color: #000;
+}
+
+/* -------------------------- Information ----------------------*/
+.information {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.input_control * {
+  text-transform: none;
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.input_control {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  margin-top: 50px;
+}
+.input_control.none {
+  opacity: 0;
+}
+.ctrl1 {
+  width: 40%;
+  height: 30px;
+  line-height: 30px;
+}
+.ctrl2 {
+  width: 60%;
+  height: 30px;
+  line-height: 30px;
+  text-transform: capitalize;
+}
+.input_control i {
+  font-size: 1.3rem;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+/* Xoa muc tang giam cua input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input_control button {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 50%;
+  height: 35px;
+  border-color: lightgray;
+  background-image: linear-gradient(#fff, rgb(87, 87, 87));
+}
+.information .error {
+  color: var(--error_color);
+  text-align: left;
+  margin-top: -25px;
+}
+/*----------- Set info -------------*/
+.set * {
+  text-transform: none;
+}
+.set {
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 10px;
+  display: none;
+}
+.set.setBirth .error {
+  margin-top: 100px;
+}
+
+.set label {
+  color: rgb(78, 78, 78);
+  border: 10px solid transparent;
+}
+.set legend {
+  margin-left: 15px;
+  text-align: left;
+}
+fieldset {
+  border-radius: 5px;
+  margin: 30px 0;
+  border-color: #000;
+}
+fieldset.valid {
+  border-color: var(--success_color);
+}
+fieldset.invalid {
+  border-color: var(--error_color);
+}
+.set input {
+  outline: none;
+  border: none;
+  width: 95%;
+  height: 40px;
+  background: transparent;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+.set #back {
+  text-align: left;
+}
+.set #back i {
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+}
+.set section {
+  text-align: right;
+  margin-top: 50px;
+}
+.set button {
+  background-color: transparent;
+  border-radius: 5px;
+  height: 30px;
+  width: 90px;
+  cursor: pointer;
+}
+.set.setBirth fieldset {
+  width: 30%;
+  float: left;
+  margin-right: 12px;
+  height: 70px;
+}
+.set.setBirth select {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 95%;
+  height: 35px;
+  color: #000;
+}
+.set.setBirth .gender input {
+  width: 25px;
+  margin-right: 30px;
+}
+.set.setBirth .gender fieldset {
+  display: flex;
+  width: 50%;
+  height: 80px;
+}
+.set.setBirth section button {
+  margin-top: 80px;
+}
+
+.set.setContact {
+  height: 55%;
+}
+/* ============= USER LEFT ==================== */
+.user__left {
+  position: relative;
+  right: 0;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  float: left;
+  text-align: center;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  padding: 130px 50px;
+  transition: 0.5s ease-out;
+  overflow: hidden;
+}
+
+.name {
+  width: 100%;
+  height: 40px;
+  color: #efcfa0;
+  justify-content: space-between;
+  display: flex;
+  margin: 0 auto;
+  line-height: 0px;
+}
+.mainname {
+  font-size: 1.1rem;
+  width: 80%;
+}
+.name::before,
+.name::after {
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: #6b6b6b;
+}
+
+.option {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.option ul {
+  list-style: none;
+}
+.option ul li {
+  margin-top: 30px;
+}
+.op {
+  color: rgb(161, 161, 161);
+  font-size: 1.2rem;
+  text-transform: none;
+}
+.option .oder:hover .op,
+.op.act {
+  color: #fff;
+  cursor: pointer;
+}

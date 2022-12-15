@@ -1,0 +1,159 @@
+:root {
+  --head_backcolor: #181818;
+}
+body {
+}
+/* ==================== Banner ==================*/
+.img {
+  width: 100%;
+  position: fixed;
+}
+.banner {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  position: relative;
+  justify-content: center;
+  z-index: -1;
+}
+.banner__image {
+  border-radius: 20px;
+  position: fixed;
+
+  width: 450px;
+}
+
+.swap {
+  margin: 0 auto;
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+.swap__text {
+  position: absolute;
+  text-align: center;
+}
+.swap__text div {
+  overflow: hidden;
+  float: right;
+  height: 120px;
+}
+.swap__text li {
+  font-size: 120px;
+  line-height: 120px;
+  font-weight: 300;
+  padding: 0 10px;
+  margin-bottom: 45px;
+  /* font-family: "Nosifer Caps"; */
+  font-family: "Wallpoet";
+}
+.banner__stroked-title {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+.flip {
+  animation: flip 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+}
+
+@keyframes flip {
+  0% {
+    margin-top: -5px;
+  }
+  20% {
+    margin-top: -150px;
+  }
+  40% {
+    margin-top: -330px;
+  }
+  60% {
+    margin-top: -500px;
+  }
+  80% {
+    margin-top: -650px;
+  }
+  90% {
+    margin-top: -0px;
+  }
+  95% {
+    margin-top: -5px;
+  }
+
+  100% {
+    margin-top: -10px;
+  }
+}
+
+/* ===================Content================ */
+.content {
+  background-color: #eaeaea;
+  padding: 100px 80px;
+  height: 100vh;
+}
+.content__news {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  display: flex;
+}
+.content__news a {
+  text-decoration: none;
+}
+/* Content left */
+.content__news .img__left {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.content__news pre {
+  text-transform: none;
+  text-shadow: none;
+  font-weight: 200;
+}
+.content__span {
+  position: absolute;
+  bottom: 30px;
+  margin-left: 50px;
+  font-size: 45px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 5px 6px rgba(255, 255, 255, 0.7);
+}
+
+/* Đường ngăn cách  */
+.content__news section {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100px;
+  background-color: #eaeaea;
+}
+.content__news section div {
+  height: 100%;
+  width: 5px;
+  border-radius: 10px;
+  background-color: #d9d9d9;
+  display: flex;
+  margin: 0 auto;
+}
+/* Content right */
+.content__news .img__right {
+  width: 100%;
+  height: 60%;
+  border-radius: 5px;
+}
+.content_right {
+  background-color: rgb(219, 219, 219);
+  width: 100%;
+  height: 40%;
+  position: relative;
+  text-align: center;
+  color: #000;
+}
+.content_right h2 {
+  font-size: 1.5rem;
+  color: #000;
+}
+.content_right span {
+  text-align: center;
+}

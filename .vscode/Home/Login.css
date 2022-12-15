@@ -1,0 +1,318 @@
+:root {
+  --head_backcolor: #181818;
+  --success_color: #00fffb;
+  --error_color: #e74c3c;
+}
+.login {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+.login__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.login__content h1 {
+  font-size: 1.3rem;
+}
+/* LOGIN CONTENT 1 */
+.login__content-1 {
+  width: 60%;
+  height: 100%;
+  overflow: hidden;
+}
+.vid__login1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.vid__login1 video {
+  left: -50%;
+  position: relative;
+  z-index: -1;
+  width: 200%;
+  height: 120%;
+}
+.text1,
+.text2 {
+  position: absolute;
+  top: 20%;
+  left: 2%;
+  font-size: 3rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-image: url(../Pictures/back.png);
+  background-size: 200%;
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textclip 20s linear infinite;
+}
+.text1 {
+  top: 12%;
+  font-size: 2.5rem;
+  -webkit-text-stroke: 1px #000;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 150% center;
+  }
+}
+
+/* LOGIN CONTENT 2 */
+.login__content-2,
+.login__content-3,
+.login__content-4 {
+  width: 40%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 130px 50px;
+  padding-bottom: 0px;
+  background-color: var(--head_backcolor);
+  transition: 0.5s ease-out;
+  display: none;
+}
+.login__content-2.active__signin,
+.login__content-3.active__signup,
+.login__content-4.active__signup {
+  display: block;
+}
+.login__content-2 input,
+.login__content-3 input,
+.login__content-4 input {
+  width: 80%;
+  text-transform: none;
+  border-style: none;
+  border-bottom: 2px solid #adadad;
+  background-color: transparent;
+  font-size: 1.2rem;
+  line-height: 35px;
+  margin-bottom: 20px;
+  outline: none;
+  color: #edc967;
+}
+.mes {
+  width: 0;
+  position: relative;
+  height: 2px;
+  top: -22px;
+  left: 10%;
+  transition: 0.3s linear;
+  text-align: left;
+  color: red;
+  font-size: 0.8rem;
+  text-transform: none;
+  opacity: 0;
+}
+.mes_valid {
+  width: 80%;
+  opacity: 1;
+  background-color: var(--success_color);
+}
+.mes_invalid {
+  width: 80%;
+  opacity: 1;
+  background-color: var(--error_color);
+}
+input:focus + .mes {
+  width: 80%;
+  background-color: var(--success_color);
+}
+
+.login__tittle {
+  color: #edc967;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 50px;
+  text-transform: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.sec__label-username,
+.sec__label-password,
+.sec__label-forgot,
+.sec__label-username-signup,
+.sec__label-password-signup,
+.sec__label-confirmpassword {
+  position: absolute;
+  padding-left: 51px;
+  margin-top: -55px;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+.sec__label {
+  text-transform: none;
+  font-size: 1.2rem;
+}
+.login__content-2 #user:focus ~ .sec__label-username,
+.login__content-2 #password:focus ~ .sec__label-password,
+.login__content-3 #forgot:focus ~ .sec__label-forgot,
+.login__content-4 #user__signup:focus ~ .sec__label-username-signup,
+.login__content-4 #password__signup:focus ~ .sec__label-password-signup,
+.login__content-4 #confirm__password:focus ~ .sec__label-confirmpassword {
+  margin-top: -80px;
+  color: #efcfa0;
+  opacity: 1;
+}
+
+.login__forgot {
+  width: 90%;
+  text-align: right;
+}
+
+.login__forgot a {
+  text-decoration: none;
+  text-transform: none;
+  color: #efcfa0;
+  font-size: 0.8rem;
+}
+#signin,
+#signup,
+#forgot__send {
+  color: #efcfa0;
+  margin: 50px 0;
+  text-transform: none;
+  width: 40%;
+  height: 35px;
+  border-radius: 60px;
+  border-color: #fff;
+  background-color: var(--head_backcolor);
+  cursor: pointer;
+}
+
+.or {
+  width: 80%;
+  color: #efcfa0;
+  justify-content: space-between;
+  display: flex;
+  margin: 0 auto;
+  line-height: 0px;
+}
+.or .or1,
+.or .or2 {
+  height: 1px;
+  width: 45%;
+  background-color: #6b6b6b;
+}
+
+.signup__icon {
+  display: inline-flex;
+  margin-top: 30px;
+}
+.signup__icon i {
+  width: 30px;
+  line-height: 29px;
+  border-radius: 50%;
+  margin: 10px;
+  background-color: white;
+}
+.signup__icon .fa-facebook {
+  color: #3b5998;
+  font-size: 32px;
+}
+.signup__icon .fa-twitter {
+  background: #55acee;
+  color: white;
+  font-size: 20px;
+}
+.signup__icon .fa-google {
+  background: #dd4b39;
+  color: white;
+  font-size: 20px;
+}
+.show__signup {
+  margin-top: 40px;
+}
+.show__signup button {
+  background-color: transparent;
+  border-style: none;
+  color: #efcfa0;
+  position: relative;
+  text-transform: none;
+}
+.show__signup label {
+  cursor: pointer;
+}
+#show__signup,
+#show__forgot {
+  display: none;
+  cursor: pointer;
+}
+
+#show__signup:checked ~ .login__content-2,
+#show__forgot:checked ~ .login__content-2 {
+  display: none;
+}
+#show__forgot:checked ~ .login__content-3,
+#show__signup:checked ~ .login__content-4 {
+  display: block;
+}
+
+@media only screen and (max-width: 599px) {
+  .vid__login1 {
+    display: none;
+  }
+  .login__tittle {
+    margin-bottom: 30px;
+  }
+  #signin {
+    margin: 30px 0;
+  }
+  .signup__icon {
+    margin-top: 20px;
+  }
+  .login__content-2,
+  .login__content-3,
+  .login__content-4 {
+    width: 99999%;
+  }
+  .login__content-2 #user:focus ~ .sec__label-username,
+  .login__content-2 #password:focus ~ .sec__label-password,
+  .login__content-3 #forgot:focus ~ .sec__label-forgot,
+  .login__content-4 #user__signup:focus ~ .sec__label-username-signup,
+  .login__content-4 #password__signup:focus ~ .sec__label-password-signup,
+  .login__content-4 #confirm__password:focus ~ .sec__label-confirmpassword {
+    margin-left: -25px;
+  }
+  .login__content-2,
+  .login__content-3,
+  .login__content-4 {
+    padding: 100px 25px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 600px) {
+  .vid__login1 video {
+    width: 600%;
+    left: -100%;
+    top: -11%;
+  }
+
+  .login__content-2 #user:focus ~ .sec__label-username,
+  .login__content-2 #password:focus ~ .sec__label-password,
+  .login__content-3 #forgot:focus ~ .sec__label-forgot,
+  .login__content-4 #user__signup:focus ~ .sec__label-username-signup,
+  .login__content-4 #password__signup:focus ~ .sec__label-password-signup,
+  .login__content-4 #confirm__password:focus ~ .sec__label-confirmpassword {
+    margin-left: -30px;
+  }
+  .text1,
+  .text2 {
+    font-size: 2rem;
+  }
+  .text1 {
+    font-size: 1.5rem;
+  }
+  .login__content-2,
+  .login__content-3,
+  .login__content-4 {
+    width: 100%;
+  }
+}
